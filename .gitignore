@@ -1,0 +1,58 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies and build output
+node_modules
+.output
+stats.html
+stats-*.json
+coverage/
+.nyc_output/
+
+# WXT writes absolute local filesystem paths into generated types.
+# Never commit this directory.
+.wxt
+
+# web-ext sign config often holds AMO API keys
+web-ext.config.ts
+web-ext-artifacts/
+
+# Secrets, env, and signing material
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.key
+*.mobileprovision
+*.crx
+*.xpi
+.npmrc
+
+# Safari converter / Xcode (can include signing team IDs)
+/Share Tabs/
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.cursor/
+.claude/
+.DS_Store
+Thumbs.db
+._*
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

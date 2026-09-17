@@ -1,0 +1,46 @@
+{
+  "name": "share-tabs",
+  "description": "Share a group of browser tabs across Chrome, Firefox, and Safari — no accounts, no server. Copy a manifest, export a file, or scan a QR code.",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "dev:safari": "wxt -b safari",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "build:safari": "wxt build -b safari",
+    "build:all": "npm run build && npm run build:firefox && npm run build:safari",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "package:safari": "xcrun safari-web-extension-converter .output/safari-mv2 --swift --bundle-identifier com.sharetabs.extension",
+    "compile": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "postinstall": "wxt prepare"
+  },
+  "dependencies": {
+    "jsqr": "^1.4.0",
+    "lz-string": "^1.5.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@webext-core/fake-browser": "^2.0.1",
+    "@wxt-dev/module-react": "^1.1.5",
+    "happy-dom": "^20.14.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.11",
+    "web-ext": "^10.5.0",
+    "wxt": "^0.21.3"
+  }
+}
